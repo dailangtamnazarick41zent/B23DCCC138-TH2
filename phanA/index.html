@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Thư viện Sách</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <h1>Thư viện</h1>
+      <div class="header-actions">
+        <span class="fav-badge">Yêu thích: <strong id="fav-count">0</strong></span>
+        <button id="theme-toggle">Đổi giao diện</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="toolbar-section">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Tìm kiếm theo tên sách hoặc tác giả...">
+      </div>
+      <div id="genre-filter" class="genre-filter">
+      </div>
+    </section>
+
+    <section class="status-section">
+      <p id="status-text">Đang hiển thị 0 / 0 cuốn</p>
+    </section>
+
+    <div class="content-grid">
+      <section class="books-section">
+        <div id="book-grid" class="book-grid">
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="form-card">
+          <h2>Thêm Sách Mới</h2>
+          <form id="add-book-form" novalidate>
+            <div class="form-group">
+              <label for="book-name">Tên sách</label>
+              <input type="text" id="book-name">
+              <span class="error-msg" id="error-name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="book-author">Tác giả</label>
+              <input type="text" id="book-author">
+              <span class="error-msg" id="error-author"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="book-category">Thể loại</label>
+              <select id="book-category">
+                <option value="">-- Chọn thể loại --</option>
+                <option value="Công nghệ">Công nghệ</option>
+                <option value="Văn học">Văn học</option>
+                <option value="Kỹ năng sống">Kỹ năng sống</option>
+              </select>
+              <span class="error-msg" id="error-category"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="book-year">Năm xuất bản</label>
+              <input type="number" id="book-year">
+              <span class="error-msg" id="error-year"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Thêm sách</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 PTIT - Phần A TH Lập trình Web</p>
+  </footer>
+
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
